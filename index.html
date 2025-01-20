@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese New Year Landing Page</title>
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="../ChineseNewYear/style.css">
+
+    <!-- link to aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- link to font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link to remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Chinese <br> <span>New Year</span></a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#">Som</a>
+            <a href="#">Ang</a>
+            <a href="#">Poa</a>
+            <a href="#">M'nak</a>
+            <a href="#">$100</a>
+            <a href="#">Mok</a>
+            <a href="#" class="active" onclick="openPopup()">ABA</a>
+        </nav>
+    </header>
+
+    <div class="popup" id="popupBox">
+        <div class="popup-content">
+            <img src="./Img/photo_2025-01-12_13-49-30.jpg" alt="">
+            <button onclick="closePopup()">
+                <i class="ri-close-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="content" data-aos="fade-right" data-aos-duration="2000">
+            <h1>Happy,</h1>
+            <h1>Chinese New Year <span>2025</span></h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nam sunt iste sint cum doloribus quam
+                cupiditate, libero veritatis explicabo voluptate, nobis quia fugiat inventore? Quo provident accusantium
+                deserunt est quaerat suscipit quam dignissimos cumque, sequi, laudantium, labore explicabo at.
+                Reprehenderit perspiciatis nihil exercitationem quas tempora repellat et qui, illo quae saepe, ducimus
+                quasi commodi corrupti dolore voluptatum culpa veritatis possimus quidem, architecto ratione? Sunt
+                autem, cumque in modi harum aperiam veniam maxime, enim dolores optio sit, laboriosam dignissimos
+                aspernatur dicta reiciendis. Corrupti sint illo enim quam obcaecati perferendis, possimus voluptate
+                magnam iste praesentium culpa laudantium nihil recusandae libero vitae.
+            </p>
+
+            <button>Rescieve Gift</button>
+
+            <div class="social">
+                <a href="https://web.facebook.com/lawliet.394"><i class="ri-facebook-box-fill"></i></a>
+                <a href="https://t.me/T_L_L_3_9_4"><i class="ri-telegram-2-fill"></i></a>
+                <a href="https://www.instagram.com/lylylyly_lylylylylylylylylyly/"><i class="ri-instagram-line"></i></a>
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="./Img/LNY_2025_1920x1080-removebg-preview.png" alt="">
+            <img src="./Img/224b755638d17c5918d11e56f89603ef-removebg-preview.png" alt="">
+            <img src="./Img/224b755638d17c5918d11e56f89603ef-removebg-preview.png" alt="">
+            <img src="./Img/image.png" alt="">
+            <img src="./Img/image.png" alt="">
+        </div>
+    </section>
+</body>
+</html>
+<!-- script to aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+        // Function to open the popup
+        function openPopup() {
+            const popup = document.getElementById('popupBox');
+            popup.style.display = 'flex';
+
+            setTimeout(() => {
+                popup.classList.add('show');
+            } , 10);
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            const popup = document.getElementById('popupBox');
+            popup.classList.remove('show');
+            setTimeout(() => {
+                popup.style.display = 'none';
+            } , 1000);
+        }
+
+        let menuIcon = document.querySelector('#menu-icon')
+        let navbar = document.querySelector('.navbar')
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('fa-xmark')
+
+            navbar.classList.toggle('active')
+        }
+    </script>
