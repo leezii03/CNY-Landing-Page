@@ -105,10 +105,12 @@ section {
     background: none;
     top: 0;
     right: 0;
+    border: none;
 }
 
 .popup-content button i {
     color: black;
+    font-size: 1.5rem;
 }
 
 .container {
@@ -143,7 +145,7 @@ section {
     padding: 20px 0;
 }
 
-button {
+.gift {
     padding: 1rem;
     width: 200px;
     border: none;
@@ -155,7 +157,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.gift:hover {
     opacity: .9;
 }
 
